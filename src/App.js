@@ -1,5 +1,4 @@
-import Header from "./components/header/Header";
-import '../node_modules/bootstrap/dist/css/bootstrap.min.css'
+import './App.css';
 import {
   BrowserRouter as Router,
   Switch,
@@ -8,21 +7,20 @@ import {
 import Home from "./components/home/Home";
 import NotFound from "./components/notFound/NotFound";
 import Details from "./components/details/Details";
-import Navbar from "./components/navbar/Navbar";
+import Header from './components/header/Header/Header'
 
 
 
 function App() {
   return (
     <Router>
-      <Navbar />
       <Switch>
         <Route exact path='/'>
           <Header />
           <Home />
         </Route>
         <Route path='/home'>
-          <Header />
+        <Header />
           <Home />
         </Route>
         <Route path='/team/:teamId'>
